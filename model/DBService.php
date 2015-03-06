@@ -2,23 +2,24 @@
 
 class DBService {
 
-    private $db = null;
+  public $db = null;
 
-    function __construct(){
-        $this->db = mysql_connect('localhost','root','pi3141');
-        mysql_select_db('dbarticles',$this->db);
-        echo'DB created';
-    }
+     function connect_DB(){
+         $this->db = mysql_connect('localhost', 'root', '3141');
+         mysql_select_db('dbarticles');
 
-    public static function  getAll(){
+        }
 
-        $query = 'select * from `articles`';
+    public  function  getAll(){
+
+        $query = 'select * from articles';
         $res = mysql_query($query);
         $arr = Array();
-        while($row = mysql_fetch_assoc($res)){
+        while ($row = mysql_fetch_assoc($res)) {
             $arr[] = $row;
         }
         return $arr;
+
     }
 
     public function getById($id){
@@ -51,28 +52,32 @@ class DBService {
             return false;
     }
 
-
 }
-
-//$n = new DBService;
-//$t = $n->getAll();
-//var_dump($t);
 /*
-$query = 'select * from articles';
-$res = mysql_query($query);
-$arr = Array();
-while($row = mysql_fetch_assoc($res)){	
-	$arr[] = $row;
-}
-foreach($arr as $k=>$v){
-	echo $k.'<br>';
-	foreach($v as $j=>$val)
-		echo $j.' = > '.$val.' - ';
-}
+$n = new DBService;
+$n->connect_DB();
+$all = $n->getAll();
+var_dump($all);
+
+/*
+   mysql_connect('localhost', 'root', '3141');
+   mysql_select_db('dbarticles');
+
+    $query = 'select * from articles';
+    $res = mysql_query($query);
+    $arr = Array();
+    while ($row = mysql_fetch_assoc($res)) {
+        $arr[] = $row;
+    }
+    foreach ($arr as $k => $v) {
+        echo $k . '<br>';
+        foreach ($v as $j => $val)
+            echo $j . ' = > ' . $val . ' - ';
+    }
+
+echo mysql_error();
+qu();
 */
-
-
-
 
 
 

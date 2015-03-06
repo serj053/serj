@@ -1,7 +1,10 @@
 <?php
+/*
     function __autoload($class){
-        require'../model/'.$class.'.php';
+        require'./model/'.$class.'.php';
     }
+*/
+require'../model/NewsModel.php';
 
 class NewsController extends AbstractController{
     function AllAction(){
@@ -25,5 +28,6 @@ class NewsController extends AbstractController{
     }
 }
 
-$cl = new NewsController();
-var_dump($cl->AllAction());
+var_dump(NewsModel::getAll());
+//$cl = new NewsController();
+//var_dump($cl->AllAction());
