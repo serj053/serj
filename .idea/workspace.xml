@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a036b5e-7ffa-46d0-9867-047160b3c4b5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/Test.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/DBService.php" afterPath="$PROJECT_DIR$/model/DBService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/NewsController.php" afterPath="$PROJECT_DIR$/controller/NewsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/NewsModel.php" afterPath="$PROJECT_DIR$/model/NewsModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connect_DB/connect.php" afterPath="$PROJECT_DIR$/connect_DB/connect.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test_DB.iws" />
@@ -56,26 +51,26 @@
       <file leaf-file-name="DBService.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/DBService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.6092943" vertical-offset="0" max-vertical-offset="1564">
-              <caret line="55" column="2" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.49741825" vertical-offset="0" max-vertical-offset="1666">
+              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
               <folding>
-                <marker date="1425660537968" expanded="true" signature="244:266" placeholder="select * fro..articles..." />
-                <marker date="1425660537968" expanded="true" signature="495:534" placeholder="select * fro..articels..." />
-                <marker date="1425660537968" expanded="true" signature="495:535" placeholder="select * fro..articels..." />
-                <marker date="1425660537968" expanded="true" signature="495:536" placeholder="select * fro..articles..." />
-                <marker date="1425660537968" expanded="true" signature="495:540" placeholder="select * fro..articels..." />
-                <marker date="1425660537968" expanded="true" signature="495:576" placeholder="select * fro..articles..." />
-                <marker date="1425660537968" expanded="true" signature="712:826" placeholder="insert into ..." />
-                <marker date="1425660537968" expanded="true" signature="1028:1077" placeholder="update artic..." />
-                <marker date="1425660537968" expanded="true" signature="1028:1078" placeholder="update artic..." />
-                <marker date="1425660537968" expanded="true" signature="1028:1106" placeholder="update artic..." />
-                <marker date="1425660537968" expanded="true" signature="1028:1116" placeholder="update artic..." />
-                <marker date="1425660537968" expanded="true" signature="1028:1135" placeholder="update artic..." />
-                <marker date="1425660537968" expanded="true" signature="1028:1147" placeholder="update artic..." />
-                <marker date="1425660537968" expanded="true" signature="1028:1183" placeholder="update artic..." />
-                <marker date="1425660537968" expanded="true" signature="1028:1184" placeholder="update artic..." />
-                <marker date="1425660537968" expanded="true" signature="1028:1217" placeholder="update artic..." />
-                <marker date="1425660537968" expanded="true" signature="1535:1557" placeholder="select * fro..articles..." />
+                <marker date="1425662267046" expanded="true" signature="291:313" placeholder="select * fro..articles..." />
+                <marker date="1425662267046" expanded="true" signature="542:581" placeholder="select * fro..articels..." />
+                <marker date="1425662267046" expanded="true" signature="542:582" placeholder="select * fro..articels..." />
+                <marker date="1425662267046" expanded="true" signature="542:583" placeholder="select * fro..articles..." />
+                <marker date="1425662267046" expanded="true" signature="542:587" placeholder="select * fro..articels..." />
+                <marker date="1425662267046" expanded="true" signature="542:623" placeholder="select * fro..articles..." />
+                <marker date="1425662267046" expanded="true" signature="759:873" placeholder="insert into ..." />
+                <marker date="1425662267046" expanded="true" signature="1075:1124" placeholder="update artic..." />
+                <marker date="1425662267046" expanded="true" signature="1075:1125" placeholder="update artic..." />
+                <marker date="1425662267046" expanded="true" signature="1075:1153" placeholder="update artic..." />
+                <marker date="1425662267046" expanded="true" signature="1075:1163" placeholder="update artic..." />
+                <marker date="1425662267046" expanded="true" signature="1075:1182" placeholder="update artic..." />
+                <marker date="1425662267046" expanded="true" signature="1075:1194" placeholder="update artic..." />
+                <marker date="1425662267046" expanded="true" signature="1075:1230" placeholder="update artic..." />
+                <marker date="1425662267046" expanded="true" signature="1075:1231" placeholder="update artic..." />
+                <marker date="1425662267046" expanded="true" signature="1075:1264" placeholder="update artic..." />
+                <marker date="1425662267046" expanded="true" signature="1683:1705" placeholder="select * fro..articles..." />
               </folding>
             </state>
           </provider>
@@ -173,8 +168,8 @@
         <option value="$PROJECT_DIR$/controller/NewsController.php" />
         <option value="$PROJECT_DIR$/classes/Test_1.php" />
         <option value="$PROJECT_DIR$/model/Test.php" />
-        <option value="$PROJECT_DIR$/model/DBService.php" />
         <option value="$PROJECT_DIR$/model/NewsModel.php" />
+        <option value="$PROJECT_DIR$/model/DBService.php" />
       </list>
     </option>
   </component>
@@ -347,12 +342,20 @@
       <option name="number" value="Default" />
       <updated>1425039446703</updated>
     </task>
+    <task id="LOCAL-00001" summary="for testing">
+      <created>1425661049953</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1425661049953</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="85" y="29" width="930" height="728" extended-state="0" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -412,6 +415,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="for testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="for testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -487,23 +492,23 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="1479">
           <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
-            <marker date="1425660537968" expanded="true" signature="244:266" placeholder="select * fro..articles..." />
-            <marker date="1425660537968" expanded="true" signature="495:534" placeholder="select * fro..articels..." />
-            <marker date="1425660537968" expanded="true" signature="495:535" placeholder="select * fro..articels..." />
-            <marker date="1425660537968" expanded="true" signature="495:536" placeholder="select * fro..articles..." />
-            <marker date="1425660537968" expanded="true" signature="495:540" placeholder="select * fro..articels..." />
-            <marker date="1425660537968" expanded="true" signature="495:576" placeholder="select * fro..articles..." />
-            <marker date="1425660537968" expanded="true" signature="712:826" placeholder="insert into ..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1077" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1078" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1106" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1116" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1135" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1147" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1183" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1184" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1217" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1535:1557" placeholder="select * fro..articles..." />
+            <marker date="1425662267046" expanded="true" signature="291:313" placeholder="select * fro..articles..." />
+            <marker date="1425662267046" expanded="true" signature="542:581" placeholder="select * fro..articels..." />
+            <marker date="1425662267046" expanded="true" signature="542:582" placeholder="select * fro..articels..." />
+            <marker date="1425662267046" expanded="true" signature="542:583" placeholder="select * fro..articles..." />
+            <marker date="1425662267046" expanded="true" signature="542:587" placeholder="select * fro..articels..." />
+            <marker date="1425662267046" expanded="true" signature="542:623" placeholder="select * fro..articles..." />
+            <marker date="1425662267046" expanded="true" signature="759:873" placeholder="insert into ..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1124" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1125" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1153" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1163" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1182" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1194" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1230" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1231" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1264" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1683:1705" placeholder="select * fro..articles..." />
           </folding>
         </state>
       </provider>
@@ -585,23 +590,23 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1479">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1425660537968" expanded="true" signature="244:266" placeholder="select * fro..articles..." />
-            <marker date="1425660537968" expanded="true" signature="495:534" placeholder="select * fro..articels..." />
-            <marker date="1425660537968" expanded="true" signature="495:535" placeholder="select * fro..articels..." />
-            <marker date="1425660537968" expanded="true" signature="495:536" placeholder="select * fro..articles..." />
-            <marker date="1425660537968" expanded="true" signature="495:540" placeholder="select * fro..articels..." />
-            <marker date="1425660537968" expanded="true" signature="495:576" placeholder="select * fro..articles..." />
-            <marker date="1425660537968" expanded="true" signature="712:826" placeholder="insert into ..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1077" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1078" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1106" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1116" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1135" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1147" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1183" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1184" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1217" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1535:1557" placeholder="select * fro..articles..." />
+            <marker date="1425662267046" expanded="true" signature="291:313" placeholder="select * fro..articles..." />
+            <marker date="1425662267046" expanded="true" signature="542:581" placeholder="select * fro..articels..." />
+            <marker date="1425662267046" expanded="true" signature="542:582" placeholder="select * fro..articels..." />
+            <marker date="1425662267046" expanded="true" signature="542:583" placeholder="select * fro..articles..." />
+            <marker date="1425662267046" expanded="true" signature="542:587" placeholder="select * fro..articels..." />
+            <marker date="1425662267046" expanded="true" signature="542:623" placeholder="select * fro..articles..." />
+            <marker date="1425662267046" expanded="true" signature="759:873" placeholder="insert into ..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1124" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1125" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1153" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1163" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1182" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1194" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1230" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1231" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1264" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1683:1705" placeholder="select * fro..articles..." />
           </folding>
         </state>
       </provider>
@@ -689,23 +694,23 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="363" max-vertical-offset="1105">
           <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
           <folding>
-            <marker date="1425660537968" expanded="true" signature="244:266" placeholder="select * fro..articles..." />
-            <marker date="1425660537968" expanded="true" signature="495:534" placeholder="select * fro..articels..." />
-            <marker date="1425660537968" expanded="true" signature="495:535" placeholder="select * fro..articels..." />
-            <marker date="1425660537968" expanded="true" signature="495:536" placeholder="select * fro..articles..." />
-            <marker date="1425660537968" expanded="true" signature="495:540" placeholder="select * fro..articels..." />
-            <marker date="1425660537968" expanded="true" signature="495:576" placeholder="select * fro..articles..." />
-            <marker date="1425660537968" expanded="true" signature="712:826" placeholder="insert into ..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1077" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1078" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1106" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1116" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1135" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1147" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1183" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1184" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1217" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1535:1557" placeholder="select * fro..articles..." />
+            <marker date="1425662267046" expanded="true" signature="291:313" placeholder="select * fro..articles..." />
+            <marker date="1425662267046" expanded="true" signature="542:581" placeholder="select * fro..articels..." />
+            <marker date="1425662267046" expanded="true" signature="542:582" placeholder="select * fro..articels..." />
+            <marker date="1425662267046" expanded="true" signature="542:583" placeholder="select * fro..articles..." />
+            <marker date="1425662267046" expanded="true" signature="542:587" placeholder="select * fro..articels..." />
+            <marker date="1425662267046" expanded="true" signature="542:623" placeholder="select * fro..articles..." />
+            <marker date="1425662267046" expanded="true" signature="759:873" placeholder="insert into ..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1124" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1125" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1153" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1163" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1182" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1194" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1230" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1231" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1264" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1683:1705" placeholder="select * fro..articles..." />
           </folding>
         </state>
       </provider>
@@ -863,26 +868,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/DBService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6092943" vertical-offset="0" max-vertical-offset="1564">
-          <caret line="55" column="2" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.49741825" vertical-offset="0" max-vertical-offset="1666">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
           <folding>
-            <marker date="1425660537968" expanded="true" signature="244:266" placeholder="select * fro..articles..." />
-            <marker date="1425660537968" expanded="true" signature="495:534" placeholder="select * fro..articels..." />
-            <marker date="1425660537968" expanded="true" signature="495:535" placeholder="select * fro..articels..." />
-            <marker date="1425660537968" expanded="true" signature="495:536" placeholder="select * fro..articles..." />
-            <marker date="1425660537968" expanded="true" signature="495:540" placeholder="select * fro..articels..." />
-            <marker date="1425660537968" expanded="true" signature="495:576" placeholder="select * fro..articles..." />
-            <marker date="1425660537968" expanded="true" signature="712:826" placeholder="insert into ..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1077" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1078" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1106" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1116" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1135" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1147" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1183" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1184" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1028:1217" placeholder="update artic..." />
-            <marker date="1425660537968" expanded="true" signature="1535:1557" placeholder="select * fro..articles..." />
+            <marker date="1425662267046" expanded="true" signature="291:313" placeholder="select * fro..articles..." />
+            <marker date="1425662267046" expanded="true" signature="542:581" placeholder="select * fro..articels..." />
+            <marker date="1425662267046" expanded="true" signature="542:582" placeholder="select * fro..articels..." />
+            <marker date="1425662267046" expanded="true" signature="542:583" placeholder="select * fro..articles..." />
+            <marker date="1425662267046" expanded="true" signature="542:587" placeholder="select * fro..articels..." />
+            <marker date="1425662267046" expanded="true" signature="542:623" placeholder="select * fro..articles..." />
+            <marker date="1425662267046" expanded="true" signature="759:873" placeholder="insert into ..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1124" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1125" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1153" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1163" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1182" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1194" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1230" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1231" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1075:1264" placeholder="update artic..." />
+            <marker date="1425662267046" expanded="true" signature="1683:1705" placeholder="select * fro..articles..." />
           </folding>
         </state>
       </provider>

@@ -2,16 +2,16 @@
 
 class DBService {
 
-  public $db = null;
+  public static $db = null;
 
-     function connect_DB(){
-         $this->db = mysql_connect('localhost', 'root', '3141');
+    static function connect_DB(){
+         self::$db = mysql_connect('localhost', 'root', '3141');
          mysql_select_db('dbarticles');
 
         }
 
-    public  function  getAll(){
-
+    public static function  getAll(){
+         self::connect_DB();
         $query = 'select * from articles';
         $res = mysql_query($query);
         $arr = Array();
@@ -53,6 +53,12 @@ class DBService {
     }
 
 }
+
+//DBService::connect_DB();
+//var_dump(DBService::$db);
+$all = DBService::getAll();
+var_dump($all);
+
 /*
 $n = new DBService;
 $n->connect_DB();
