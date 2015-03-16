@@ -1,33 +1,48 @@
 <?php
-/*
+date_default_timezone_set('Europe/Moscow');
     function __autoload($class){
-        require'./model/'.$class.'.php';
+        require'../model/'.$class.'.php';
     }
-*/
-require'../model/NewsModel.php';
 
+require'AbstractController.php';
+require'classes/View.php';
 class NewsController extends AbstractController{
-    function AllAction(){
-       return  NewsModel::findAll();
-        //include'../view/all.php';
+
+    function __construct(){
+       // echo'NewsController created !';
     }
 
-    protected function findByIdAction(){
-        $allNews = NewsModel::findById();
+
+    function getAllAction(){
+      $allNews =  NewsModel::getAllArticles();
+        $view = new View;
+        $view->item = $allNews;
+        $view->display();
+
+    }
+
+    protected function getArticleAction($id){
+        $allNews = NewsModel::getArticle($id);
         include'../view/all.php';
     }
 
-    protected function DeleteAction(){
-        $allNews = NewsModel::Delete();
+    protected function deleteArticleAction($id){
+        $allNews = NewsModel::deleteArticle($id);
         include'../view/all.php';
     }
 
-    protected function AddAction(){
-        $allNews = NewsModel::add();
+    protected function addArticleAction($title, $content){
+        $allNews = NewsModel::addArticle($title, $content);
+        include'../view/all.php';
+    }
+    protected function updateArticleAction($id, $title, $content){
+        $allNews = NewsModel::updateArticle($id, $title, $content);
         include'../view/all.php';
     }
 }
 
-var_dump(NewsModel::getAll());
-//$cl = new NewsController();
-//var_dump($cl->AllAction());
+//$n = new NewsController();
+//$n->getAllAction();
+//$n =  new NewsController();
+//var_dump($n->getAllAction());
+//$n->getAllAction();

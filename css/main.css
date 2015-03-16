@@ -1,0 +1,25 @@
+/*Стили страницы списка новостей*/
+    #cap{
+        height:40px;
+    }
+    #menu{
+        text-align:center;
+    }
+    #all_news{
+        border:1px solid #ccc;
+        width:500px;
+        margin:50px auto;
+        background-color:#eee;
+    }
+    #string{
+        border-bottom: 1px solid #888;
+    }
+    #title{
+        padding-left:10px;
+        display:inline-block;
+        width:100px;
+        background-color:#cc9;
+    }
+    #content{
+
+    }

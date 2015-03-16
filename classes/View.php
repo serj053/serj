@@ -8,8 +8,12 @@
 
 class View implements Iterator{
 
-    protected $data = array();
+    public function display(){
+        include'view/view_all.php';
+    }
 
+    protected $data = array();
+    //$data = 'new string';
     public function __set($key, $value){
         $this->data[$key] = $value;
     }
@@ -34,11 +38,12 @@ class View implements Iterator{
 
 }
 
-$n = new View;
-$n->one ='первый';
-$n->two = 'второй';
-$n->tree = 'третий';
+//$n = new View;
+//$n->one ='первый';
+//$n->two = 'второй';
+//$n->tree = 'третий';
+//$n->str = 'new string';
 
-foreach($n as $k=>$v)
-    echo $k.' = > '.$v.'<br>';
+//foreach($n as $k=>$v)
+ //   echo $k.' = > '.$v.'<br>';
 

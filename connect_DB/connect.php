@@ -9,3 +9,4 @@
 
     $res = mysql_fetch_assoc($query);
 var_dump($res);
+

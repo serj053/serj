@@ -5,10 +5,13 @@ class DBService {
   public static $db = null;
 
     static function connect_DB(){
-         self::$db = mysql_connect('localhost', 'root', '3141');
-         mysql_select_db('dbarticles');
-
+        if(self::$db == null) {
+            self::$db = mysql_connect('localhost', 'root', '3141');
+            mysql_select_db('dbarticles');
+        }else{
+            return self::$db;
         }
+      }
 
     public static function  getAll(){
          self::connect_DB();
@@ -22,13 +25,15 @@ class DBService {
 
     }
 
-    public function getById($id){
+    public static function getById($id){
+        self::connect_DB();
        $query = 'select * from `articles` where id_art = '.$id;
         $res = mysql_query($query);
         return mysql_fetch_assoc($res);
     }
 
     public function insert($title,$content){
+        self::connect_DB();
         $id_user = 234;
         $query = 'insert into articles(id_user,title,content)
                     values("'.$id_user.'","'.$title.'","'.$content.'")';
@@ -38,13 +43,13 @@ class DBService {
     }
 
     public function update($id_art,$title, $content){
+        self::connect_DB();
         $id_user = 565;
         $query = 'update articles
                     set id_user = '.$id_user.',
 					title = "'.$title.'",
 					content = "'.$content.'"
                     where id_art = '.$id_art;
-    //var_dump($query);
         $res = mysql_query($query);
         if(false != $res)
             return $id_art;
@@ -53,11 +58,6 @@ class DBService {
     }
 
 }
-
-//DBService::connect_DB();
-//var_dump(DBService::$db);
-$all = DBService::getAll();
-var_dump($all);
 
 /*
 $n = new DBService;
