@@ -2,7 +2,7 @@
     #cap{
         height:40px;
     }
-    #menu{
+    #menu, #edit{
         text-align:center;
     }
     #all_news{
@@ -23,3 +23,22 @@
     #content{
 
     }
+/*стили страницы создания новой статьи*/
+    #new_article{
+        border:1px solid #ccc;
+        width:500px;
+        margin:50px auto;
+        background-color:#eee;
+    }
+    #new_title{
+        display:block;
+        margin:10px auto;
+    }
+    #new_content{
+        display:block;
+        margin:10px auto;
+        width:480px;
+        height:200px;
+        overflow:visible;
+    }
+
