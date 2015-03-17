@@ -22,13 +22,12 @@
         <a href="">Редактировать</a>|
         <a href="">Удалить</a>
     </div>
-    <div id="all_news">
-        <div>
-            <form action="" method="post" >
-                <input type="text" name="title" id=""/>
-                <textarea name="content"></textarea>
-            </form>
-        </div>
+    <div id="new_article">
+        <form action="../index.php?ctrl=News/addArticle" method="post" >
+            <input type="text" name="title" id="new_title"/>
+            <textarea name="content" id="new_content"></textarea>
+            <input type="submit" value="Добавить"id="submit_new" />
+        </form>
     </div>
 </div><!--end wrapper -->
 </body>

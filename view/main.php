@@ -9,8 +9,8 @@
     </div>
     <hr>
     <div id="menu">
-        <a href="">Главная </a>|
-        <a href="">Статьи </a>|
+        <a href="index.php">Главная </a>|
+        <a href="index.php?ctrl=News/getAll">Статьи </a>|
         <a href="">Что новенького </a>|
         <a href="">Зачем живем </a>|
         <a href="">Прочее </a>

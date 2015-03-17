@@ -8,8 +8,8 @@
 
 class View implements Iterator{
 
-    public function display(){
-        include'view/view_all.php';
+    public function display($template){
+        include $template;
     }
 
     protected $data = array();
