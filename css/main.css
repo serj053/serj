@@ -7,7 +7,7 @@
     }
     #all_news{
         border:1px solid #ccc;
-        width:500px;
+        width:550px;
         margin:50px auto;
         background-color:#eee;
     }
@@ -22,14 +22,15 @@
         float:left;
     }
     #content{
-        width:390px;
+        width:350px;
         height:20px;
         overflow:hidden;
         float:left;
     }
-    #read_next{
-        width:40px;
+    #read_farther{
+        width:100px;
         height:20px;
+        margin-left:450px;
     }
 /*стили страницы создания новой статьи*/
     #new_article{

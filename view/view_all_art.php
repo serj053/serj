@@ -28,7 +28,7 @@
             <div id="string">
                 <div id="title"><?php echo $v['title'] ?></div>
                 <div id="content"><?php echo $v['content'] ?></div>
-                <div id="read_next">
+                <div id="read_farther">
                  <a href="index.php?ctrl=News/getArticle&id_art=<?php echo $v['id_art']; ?>">
                 Читать далее</a>
                 </div>

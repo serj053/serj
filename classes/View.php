@@ -8,12 +8,12 @@
 
 class View implements Iterator{
 
+    protected $data = array();
+
     public function display($template){
         include $template;
     }
 
-    protected $data = array();
-    //$data = 'new string';
     public function __set($key, $value){
         $this->data[$key] = $value;
     }

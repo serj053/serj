@@ -25,8 +25,8 @@
     <div id="all_news">
         <div>
                 <div id="string">
-                    <span id="title"><?php echo $data['news']['title'] ?></span>
-                    <span id="content"><?php echo $data['news']['content'] ?></span>
+                    <span id="title"><?php echo $this->data['news']['title'] ?></span>
+                    <span id="content"><?php echo $this->data['news']['content'] ?></span>
                 </div>
         </div>
     </div>

@@ -31,7 +31,8 @@ class NewsController extends AbstractController{
         $view->display('view/view_all_art.php');
     }
 
-    protected function getArticleAction($id){
+    protected function getArticleAction(){
+        $id = $_GET['id_art'];
         $news = NewsModel::getArticle($id);
         $view = new View;
         $view->news = $news;
