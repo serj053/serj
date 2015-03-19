@@ -18,22 +18,24 @@ class NewsController extends AbstractController{
         $view = new View;
         $view->item = $allNews;
         $view->display('view/view_all_art.php');
-
     }
 
     protected function addArticleAction(){
         $title = $_POST['title'];
         $content = $_POST['content'];
         $id_art = NewsModel::addArticle($title, $content);
-        $news = $this->getArticleAction($id_art);
+        $allNews =  NewsModel::getAllArticles();
+       // $news = NewsModel::getArticle($id_art);
         $view = new View;
-        $view->news = $news;
+        $view->item = $allNews;
         $view->display('view/view_all_art.php');
     }
 
     protected function getArticleAction($id){
-        $allNews = NewsModel::getArticle($id);
-        include'../view/all.php';
+        $news = NewsModel::getArticle($id);
+        $view = new View;
+        $view->news = $news;
+        $view->display('view/view_art.php');
     }
 
     protected function deleteArticleAction($id){

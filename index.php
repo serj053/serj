@@ -10,7 +10,6 @@
         $action = $arr[1];
         $ctrl = new $ctrlClass;
         $ctrl->action($action);
-
     }else{
         require'view/main.php';
     }

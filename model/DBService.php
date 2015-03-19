@@ -38,7 +38,6 @@ class DBService {
         $query = 'insert into articles(id_user,title,content)
                     values("'.$id_user.'","'.$title.'","'.$content.'")';
         $res = mysql_query($query);
-        var_dump($query);
         return mysql_insert_id();
     }
 
@@ -55,6 +54,17 @@ class DBService {
             return $id_art;
         else
             return false;
+    }
+
+    public static function delete($id){
+        self:connect_DB();
+        $query='delete from articles where $id_art ='.$id;
+        $res = mysql_query($query);
+        if($res) {
+            return true;
+        } else{
+            return false;
+        }
     }
 
 }

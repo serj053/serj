@@ -8,7 +8,7 @@
     <div id="cap">
 
     </div>
-<hr>
+    <hr>
     <div id="menu">
         <a href="index.php">Главная </a>|
         <a href="index.php?ctrl=News/getAll">Статьи </a>|
@@ -16,7 +16,7 @@
         <a href="">Зачем живем </a>|
         <a href="">Прочее </a>
     </div>
-<hr>
+    <hr>
     <div id="edit">
         <a href="view/new_art.php">Вставить статью</a>|
         <a href="">Редактировать</a>|
@@ -24,19 +24,14 @@
     </div>
     <div id="all_news">
         <div>
-            <?php foreach($this->data['item'] as $v):?>
-            <div id="string">
-                <div id="title"><?php echo $v['title'] ?></div>
-                <div id="content"><?php echo $v['content'] ?></div>
-                <div id="read_next">
-                 <a href="index.php?ctrl=News/getArticle&id_art=<?php echo $v['id_art']; ?>">
-                Читать далее</a>
+                <div id="string">
+                    <span id="title"><?php echo $data['news']['title'] ?></span>
+                    <span id="content"><?php echo $data['news']['content'] ?></span>
                 </div>
-            </div>
-            <?php endforeach;?>
         </div>
     </div>
 </div><!--end wrapper -->
 </body>
 </html>
+
 

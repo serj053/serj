@@ -18,7 +18,7 @@ class NewsModel extends DBService{
     }
 
     public function deleteArticle($id){
-    return DBService::getAll();
+    return DBService::delete($id);
     }
 }
 
