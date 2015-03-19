@@ -20,7 +20,8 @@
     <div id="edit">
         <a href="view/new_art.php">Вставить статью</a>|
         <a href="">Редактировать</a>|
-        <a href="">Удалить</a>
+        <a href="index.php?ctrl=News/deleteArticle&id_art=<?php echo $this->data['news']['id_art'];?>">
+            Удалить</a>
     </div>
     <div id="all_news">
         <div>

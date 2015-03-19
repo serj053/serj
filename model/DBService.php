@@ -57,7 +57,7 @@ class DBService {
     }
 
     public static function delete($id){
-        self:connect_DB();
+        self::connect_DB();
         $query='delete from articles where $id_art ='.$id;
         $res = mysql_query($query);
         if($res) {
