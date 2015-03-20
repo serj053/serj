@@ -1,4 +1,3 @@
-
 <html>
 <head><title> </title>
     <link href="css/main.css" rel="stylesheet" type="""text/css"/>
@@ -18,19 +17,18 @@
     </div>
     <hr>
     <div id="edit">
-        <a href="new_art.php">Вставить статью</a>|
-        <a href="">Редактировать</a>|
         <a href="">Удалить</a>
     </div>
-    <div id="all_news">
-        <div>
-            <?php foreach($this->data['item'] as $v):?>
-                <div id="string">
-                    <span id="title"><?php echo $v['title'] ?></span>
-                    <span id="content"><?php echo $v['content'] ?></span>
-                </div>
-            <?php endforeach;?>
-        </div>
+    <div id="new_article">
+        <form action="index.php?ctrl=News/updateArticle&id_art=
+        <?php echo $_GET['id_art'] ;  ?>" method="post" >
+            <input type="text" name="title"
+                   value="<?php echo $this->data['news']['title'] ?>"/>
+            <textarea name="content" id="new_content">
+                <?php echo $this->data['news']['content'];?>
+            </textarea>
+            <input type="submit" value="Изменить" />
+        </form>
     </div>
 </div><!--end wrapper -->
 </body>

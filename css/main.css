@@ -32,6 +32,11 @@
         height:20px;
         margin-left:450px;
     }
+/*стили страницы где расположена одна статья*/
+    #title_art{
+        text-align:center;
+        margin:10px auto;
+    }
 /*стили страницы создания новой статьи*/
     #new_article{
         border:1px solid #ccc;

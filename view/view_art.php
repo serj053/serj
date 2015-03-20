@@ -18,16 +18,17 @@
     </div>
     <hr>
     <div id="edit">
-        <a href="view/new_art.php">Вставить статью</a>|
-        <a href="">Редактировать</a>|
-        <a href="index.php?ctrl=News/deleteArticle&id_art=<?php echo $this->data['news']['id_art'];?>">
+        <a href="index.php?ctrl=News/selectArticle&id_art=
+        <?php echo $this->data['news']['id_art']; ?>">Редактировать</a>|
+        <a href="index.php?ctrl=News/deleteArticle&id_art=
+        <?php echo $this->data['news']['id_art'];?>">
             Удалить</a>
     </div>
     <div id="all_news">
         <div>
-                <div id="string">
-                    <span id="title"><?php echo $this->data['news']['title'] ?></span>
-                    <span id="content"><?php echo $this->data['news']['content'] ?></span>
+                <div id="view_art">
+                    <div id="title_art"><?php echo $this->data['news']['title'] ?></div>
+                    <div id="content_art"><?php echo $this->data['news']['content'] ?></div>
                 </div>
         </div>
     </div>

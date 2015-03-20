@@ -47,10 +47,25 @@ class NewsController extends AbstractController{
         $view->display('view/view_all_art.php');
     }
 
+    protected function selectArticleAction(){
+        $id = $_GET['id_art'];
+        $news = NewsModel::getArticle($id);
+        $view = new View;
+        $view->news = $news;
+        $view->display('view/edit_art.php');
+    }
 
-    protected function updateArticleAction($id, $title, $content){
-        $allNews = NewsModel::updateArticle($id, $title, $content);
-        include'../view/all.php';
+
+    protected function updateArticleAction(){
+        $id = $_GET['id_art'];
+        $title = $_POST['title'];
+        $content = $_POST['content'];
+        $up_news = NewsModel::updateArticle($id, $title, $content);
+        $news = NewsModel::getArticle($id);
+        $view = new View;
+        $view->news = $news;
+        $view->display('view/edit_art.php');
+
     }
 }
 

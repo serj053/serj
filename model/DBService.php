@@ -14,7 +14,7 @@ class DBService {
       }
 
     public static function  getAll(){
-         self::connect_DB();
+        self::connect_DB();
         $query = 'select * from articles';
         $res = mysql_query($query);
         $arr = Array();
@@ -57,8 +57,8 @@ class DBService {
     }
 
     public static function delete($id){
-        self::connect_DB();
-        $query='delete from articles where $id_art ='.$id;
+         self::connect_DB();
+        $query='delete from articles where id_art ='.$id;
         $res = mysql_query($query);
         if($res) {
             return true;
@@ -69,13 +69,13 @@ class DBService {
 
 }
 
-/*
-$n = new DBService;
-$n->connect_DB();
-$all = $n->getAll();
-var_dump($all);
 
-/*
+//$n = new DBService;
+//$d = $n->delete(23);
+//$all = $n->getAll();
+//var_dump($d);
+//var_dump($all);
+/*/*
    mysql_connect('localhost', 'root', '3141');
    mysql_select_db('dbarticles');
 
