@@ -27,8 +27,8 @@
     <div id="all_news">
         <div>
                 <div id="view_art">
-                    <div id="title_art"><?php echo $this->data['news']['title'] ?></div>
-                    <div id="content_art"><?php echo $this->data['news']['content'] ?></div>
+                    <div id="title_art"><?php echo $news['title'] ?></div>
+                    <div id="content_art"><?php echo $news['content'] ?></div>
                 </div>
         </div>
     </div>

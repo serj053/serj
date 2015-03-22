@@ -1,6 +1,21 @@
 <?php
 //date_default_timezone_set('Europe/Moscow');
 /**/
+    function autoloadNewsModel($class){
+        $file = 'model/'.$class.'.php';
+        if(is_readable($file)){
+            require 'model/'.$class.'.php';
+        }
+    }
+    function autoloadNewsController($class){
+        $file= 'controller/'.$class.'.php';
+        if(is_readable($file)){
+            require'controller/'.$class.'.php';
+        }
+    }
+    spl_autoload_register('autoloadNewsModel');
+    spl_autoload_register('autoloadNewsController');
+
     if(isset($_GET['ctrl'])){
         require 'model/NewsModel.php';
         require'controller/NewsController.php';

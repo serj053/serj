@@ -22,7 +22,7 @@
     </div>
     <div id="all_news">
         <div>
-            <?php foreach($this->data['item'] as $v):?>
+            <?php foreach($item as $v):?>
             <div id="string">
                 <div id="title"><?php echo $v['title'] ?></div>
                 <div id="content"><?php echo $v['content'] ?></div>

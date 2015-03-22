@@ -11,6 +11,8 @@ class View implements Iterator{
     protected $data = array();
 
     public function display($template){
+        foreach($this as $k=>$v)
+            $$k = $v;
         include $template;
     }
 
