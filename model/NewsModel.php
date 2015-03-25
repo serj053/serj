@@ -1,8 +1,8 @@
 <?php
-require'DBService.php';
+require 'DBService_old.php';
 class NewsModel extends DBService{
     public function getAllArticles(){
-        return DBService::getAll();
+        return Articles::getAll();
     }
 
     public function getArticle($id){

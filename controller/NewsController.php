@@ -14,6 +14,7 @@ class NewsController extends AbstractController{
 
 
     function getAllAction(){
+
       $allNews =  NewsModel::getAllArticles();
         $view = new View;
         $view->item = $allNews;
@@ -69,7 +70,7 @@ class NewsController extends AbstractController{
     }
 }
 
-//$n = new NewsController();
+$n = new NewsController();
 //$n->getAllAction();
 //$n =  new NewsController();
 //var_dump($n->getAllAction());
