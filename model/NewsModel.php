@@ -1,6 +1,6 @@
 <?php
-require 'DBService_old.php';
-class NewsModel extends DBService{
+require 'Articles.php';
+class NewsModel extends Articles{
     public function getAllArticles(){
         return Articles::getAll();
     }
@@ -22,5 +22,5 @@ class NewsModel extends DBService{
     }
 }
 
-//$n = new NewsModel();
-//var_dump($n->getAllArticles());
+$n = new NewsModel();
+var_dump($n->getAllArticles());

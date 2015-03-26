@@ -1,25 +1,44 @@
 <?php
 
-  //abstract
-abstract  class AbstractDBArticles {
+ class AbstractDBArticles {
 
+    static private $dbh = null;
+    protected $isNew = false;
     static protected $table;
 
     static function getDbh(){
-        $dsn = "mysql:host=localhost;dbname=dbarticles";
-      return new Pdo($dsn, 'root','3141');
+        if(self::$dbh == null) {
+            $dbh = "mysql:host=localhost;dbname=dbarticles";
+            return new Pdo($dbh, 'root', '3141');
+        }else{
+            return self::$dbh;
+        }
     }
 
    static function getAll(){
-        $sql = "select * from :table";
-        $sth = self::getDbh()->prepare($sql);
-       $arr = array(':table'=>static::$table);
-       $sth->execute($arr);
+        $sq = 'select * from '.static::$table;
+        $dbh = self::getDbh();
+       $sth = $dbh->prepare($sq);
+       $sth->execute();
       return($sth->fetchAll(PDO::FETCH_ASSOC));
     }
 
-
+    static function getOne($id){
+        $sq = 'select * from '.static::$table.' where id_art = :id';
+        $arr = array(':id' => $id);
+        $dbh = self::getDbh();
+        $sth = $dbh->prepare($sq);
+        $sth->execute($arr);
+        return $sth->fetch();
+    }
 }
 
- //AbstractDBArticles::getAll();array(':table'=>static::$table)
-//var_dump($nn);.static::$table;
+
+
+
+
+
+
+
+
+
