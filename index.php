@@ -17,7 +17,7 @@
     spl_autoload_register('autoloadNewsController');
 
     if(isset($_GET['ctrl'])){
-       // require 'model/NewsModel.php';
+       // require 'model/ArticlesModel.php';
        // require'controller/NewsController.php';
         $str = $_GET['ctrl'];
         $arr = explode('/',$str);

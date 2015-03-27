@@ -1,0 +1,33 @@
+Альберт на одном из уроков где изучалась PDO рассматривался такой пример
+$sql = "SELECT * FROM :table" ну и так далее, но пример не пошел (возвратился пустой массив) и Вы заменили
+этот запрос на $sql = "SELECT * FROM ".ststic::$table; и этот пример успешно отработал, и больше к этому не успешному варианту не возвращались, 
+я решил при повторе материала попробовать
+это вариант ,так как все таки хотелось попробовать реализовать подстановку, но как ни бился что то не клеиться, варианты типа
+"SELECT * FROM articles WHERE id = :id" - работают, а вот это "SELECT * FROM :table" не  работает , в чем же там секрет то..
+
+- код не работатет
+ static function getAll(){
+        $qu = 'select * from :table';//.static::$table;
+        $dbh = self::getDbh();
+       $arr = array(':table'=>static::$table);
+       $sth = $dbh->prepare($qu);
+       $sth->execute($arr);
+      return($sth->fetchAll(PDO::FETCH_ASSOC));
+    } - возвращает пустой массив
+- код написанный  по аналогии работате
+static function getAll(){
+        $qu = 'select * from articles where id_art = :id';
+        $dbh = self::getDbh();
+       $arr = array(':id'=>14);
+       $sth = $dbh->prepare($qu);
+       $sth->execute($arr);
+      return($sth->fetchAll(PDO::FETCH_ASSOC));
+    } - возвращает  массив
+- учебный вариант работатет
+static function getAll(){
+        $qu = 'select * from '.static::$table;
+        $dbh = self::getDbh();
+       $sth = $dbh->prepare($qu);
+       $sth->execute();
+      return($sth->fetchAll(PDO::FETCH_ASSOC));
+    } - возвращает массив

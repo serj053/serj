@@ -15,7 +15,7 @@ class NewsController extends AbstractController{
 
     function getAllAction(){
 
-      $allNews =  NewsModel::getAllArticles();
+      $allNews =  ArticlesModel::getAll();
         $view = new View;
         $view->item = $allNews;
         $view->display('view/view_all_art.php');
@@ -33,7 +33,7 @@ class NewsController extends AbstractController{
 
     protected function getArticleAction(){
         $id = $_GET['id_art'];
-        $news = NewsModel::getArticle($id);
+        $news = ArticlesModel::getOne($id);
         $view = new View;
         $view->news = $news;
         $view->display('view/view_art.php');
@@ -41,8 +41,8 @@ class NewsController extends AbstractController{
 
     protected function deleteArticleAction(){
         $id = $_GET['id_art'];
-        $allNews = NewsModel::deleteArticle($id);
-        $allNews =  NewsModel::getAllArticles();
+       print_r(ArticlesModel::delete($id));die;
+        $allNews =  ArticlesModel::getAll();
         $view = new View;
         $view->item = $allNews;
         $view->display('view/view_all_art.php');

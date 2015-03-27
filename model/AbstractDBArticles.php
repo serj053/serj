@@ -31,6 +31,14 @@
         $sth->execute($arr);
         return $sth->fetch();
     }
+
+    static function delete($id){
+        $sq = 'delete from '.static::$table.' where id_art = :id';
+        $arr = array(':id'=>$id);
+        $dbh = self::getDbh();
+        $sth = $dbh->prepare($sq);
+        return $sth->execute($arr);
+    }
 }
 
 
