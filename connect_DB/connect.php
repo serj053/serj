@@ -1,6 +1,6 @@
 <?php
 
-    $db = mysql_connect('localhost','root','');
+    $db = mysql_connect('localhost','root','3141');
     $conn = mysql_select_db('dbarticles',$db);
    // $query = 'insert into articles(id_user, title, content) values("12","titl","control")';
    // $query = mysql_query($query,$db);
