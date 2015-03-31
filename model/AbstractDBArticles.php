@@ -40,11 +40,9 @@
         return $sth->execute($arr);
     }
     
-    static function update($id){
-        $title = $_POST['title'];
-        $content = $_POST['content'];        
+    static function update($title,$content,$id){    
         $sq = 'update '.static::$table.'set title=:title '.
-                'content = :content where id = :id';
+                'content = :content where id_art = :id';
         $arr = array(':title'=>$title,':content'=>$content,':id'=>$id);
         $dbh = self::getDbh();
         $sth = $dbh->prepare($sq);

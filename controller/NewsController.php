@@ -61,8 +61,8 @@ class NewsController extends AbstractController{
         $id = $_GET['id_art'];
         $title = $_POST['title'];
         $content = $_POST['content'];
-        $up_news = NewsModel::updateArticle($id, $title, $content);
-        $news = NewsModel::getArticle($id);
+        $up_news = ArticlesModel::update($id, $title, $content);
+        $news = ArticlesModel::getOne($id);
         $view = new View;
         $view->news = $news;
         $view->display('view/edit_art.php');
@@ -70,7 +70,7 @@ class NewsController extends AbstractController{
     }
 }
 
-$n = new NewsController();
+//$n = new NewsController();
 //$n->getAllAction();
 //$n =  new NewsController();
 //var_dump($n->getAllAction());
