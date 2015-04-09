@@ -8,5 +8,5 @@
     }
 
 My::go();
+echo '<br> Надо напрячся!!!';
 
-//  I function go()

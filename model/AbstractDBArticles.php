@@ -40,24 +40,26 @@
         return $sth->execute($arr);
     }
     
-    static function update($title,$content,$id){    
-        $sq = 'update '.static::$table.'set title=:title '.
-                'content = :content where id_art = :id';
-        $arr = array(':title'=>$title,':content'=>$content,':id'=>$id);
+    static function update($id,$title,$content ){    
+   
+        $sq = 'update articles set  title = "'.$title.
+                 '", content = "'.$content.'" where id_art ='.$id;
+       // $arr = array(':title'=>$title,':content'=>$content);
         $dbh = self::getDbh();
-        $sth = $dbh->prepare($sq);
-        $sth->execute($arr);
-        return $sth->fetch(PDO::FETCH_ASSOC);
-        
+       // $sth = $dbh->prepare($sq);
+        $dbh->query($sq);        
+    }
+    
+    static function addArticle($title, $content){
+        $sq = 'insert into '.static::$table.
+        '(id_user, title, content) values( 333,'.$title.
+        ','.$content;
+        $dbh = self::getDbh();
+        $sth = $dbh->query($sq);
     }
 }
 
-
-
-
-
-
-
+//AbstractDBArticles::update($id, $title, $content)
 
 
 

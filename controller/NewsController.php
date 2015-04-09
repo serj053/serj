@@ -24,7 +24,7 @@ class NewsController extends AbstractController{
     protected function addArticleAction(){
         $title = $_POST['title'];
         $content = $_POST['content'];
-        $id_art = NewsModel::addArticle($title, $content);
+        $id_art = ArticlesModel::addArticle($title, $content);
         $allNews =  NewsModel::getAllArticles();
         $view = new View;
         $view->item = $allNews;
@@ -48,9 +48,10 @@ class NewsController extends AbstractController{
         $view->display('view/view_all_art.php');
     }
 
-    protected function selectArticleAction(){
+    protected function selectArticleAction(){ 
+//echo'In selectedArticleAction';die;
         $id = $_GET['id_art'];
-        $news = NewsModel::getArticle($id);
+        $news = ArticlesModel::getOne($id);
         $view = new View;
         $view->news = $news;
         $view->display('view/edit_art.php');
@@ -61,6 +62,7 @@ class NewsController extends AbstractController{
         $id = $_GET['id_art'];
         $title = $_POST['title'];
         $content = $_POST['content'];
+//echo'id = '.$id.' title = '.$title.' content = '.$content.'<br>';        
         $up_news = ArticlesModel::update($id, $title, $content);
         $news = ArticlesModel::getOne($id);
         $view = new View;

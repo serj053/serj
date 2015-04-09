@@ -22,6 +22,7 @@
         $ctrlClass = $arr[0].'Controller';
         $action = $arr[1];
         $ctrl = new $ctrlClass;
+//echo $action ;die;
         $ctrl->action($action);
     }else{
         require'view/main.php';
