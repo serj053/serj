@@ -1,6 +1,6 @@
 <?php
 
-    require '../classes/View.php';
+   // require '../classes/View.php';
     require 'AbstractDBArticles.php';
     class Articles extends AbstractDBArticles {
         static $table = 'articles';

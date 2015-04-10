@@ -6,14 +6,15 @@ try {
     die('Error -'.$e->getMessage());
 }
     $str = 'articles';
-    $q = 'select * from :id ';
-    $sth = $pd->prepare($q);
-    $arr = array(':id'=>'articles');
+    $sq = 'select * from articles ';
+    //$sth = $pd->prepare($q);
+    //$arr = array(':id'=>'articles');
    // $sth->bindParam(':art',$str);
     //$str = 'articles';
-    $sth->execute($arr);
-    $sth = $sth->fetchAll();
-   print_r($sth);
+    $sth = $pd->query($sq);
+   // $sth = $sth->fetchAll();
+   print_r($sth->fetchAll());
+    
 /*
 $n=0;
     foreach($sth as $k=>$v){
