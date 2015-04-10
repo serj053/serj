@@ -15,7 +15,7 @@ class NewsController extends AbstractController{
 
     function getAllAction(){
 
-      $allNews =  NewsModel::getAllArticles();
+      $allNews =  ArticlesModel::getAll();
         $view = new View;
         $view->item = $allNews;
         $view->display('view/view_all_art.php');
@@ -24,8 +24,8 @@ class NewsController extends AbstractController{
     protected function addArticleAction(){
         $title = $_POST['title'];
         $content = $_POST['content'];
-        $id_art = NewsModel::addArticle($title, $content);
-        $allNews =  NewsModel::getAllArticles();
+        $id_art = ArticlesModel::addArticle($title, $content);
+        $allNews =  ArticlesModel::getAll();
         $view = new View;
         $view->item = $allNews;
         $view->display('view/view_all_art.php');
@@ -33,7 +33,7 @@ class NewsController extends AbstractController{
 
     protected function getArticleAction(){
         $id = $_GET['id_art'];
-        $news = NewsModel::getArticle($id);
+        $news = ArticlesModel::getOne($id);
         $view = new View;
         $view->news = $news;
         $view->display('view/view_art.php');
@@ -41,16 +41,17 @@ class NewsController extends AbstractController{
 
     protected function deleteArticleAction(){
         $id = $_GET['id_art'];
-        $allNews = NewsModel::deleteArticle($id);
-        $allNews =  NewsModel::getAllArticles();
+        ArticlesModel::delete($id);
+        $allNews =  ArticlesModel::getAll();
         $view = new View;
         $view->item = $allNews;
         $view->display('view/view_all_art.php');
     }
 
-    protected function selectArticleAction(){
+    protected function selectArticleAction(){ 
+//echo'In selectedArticleAction';die;
         $id = $_GET['id_art'];
-        $news = NewsModel::getArticle($id);
+        $news = ArticlesModel::getOne($id);
         $view = new View;
         $view->news = $news;
         $view->display('view/edit_art.php');
@@ -61,8 +62,9 @@ class NewsController extends AbstractController{
         $id = $_GET['id_art'];
         $title = $_POST['title'];
         $content = $_POST['content'];
-        $up_news = NewsModel::updateArticle($id, $title, $content);
-        $news = NewsModel::getArticle($id);
+//echo'id = '.$id.' title = '.$title.' content = '.$content.'<br>';        
+        $up_news = ArticlesModel::update($id, $title, $content);
+        $news = ArticlesModel::getOne($id);
         $view = new View;
         $view->news = $news;
         $view->display('view/edit_art.php');
@@ -70,7 +72,7 @@ class NewsController extends AbstractController{
     }
 }
 
-$n = new NewsController();
+//$n = new NewsController();
 //$n->getAllAction();
 //$n =  new NewsController();
 //var_dump($n->getAllAction());

@@ -1,5 +1,5 @@
 <?php
-require 'Articles.php';
+require 'ArticlesModel.php';
 class NewsModel extends Articles{
     public function getAllArticles(){
         return Articles::getAll();

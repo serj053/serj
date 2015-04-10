@@ -20,6 +20,7 @@
         height:20px;
         background-color:#cc9;
         float:left;
+        overflow:hidden;
     }
     #content{
         width:350px;
