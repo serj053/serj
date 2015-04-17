@@ -47,7 +47,7 @@
          $dbh = self::getDbh();
          $sth = $dbh->prepare($sql);
          $sth->execute($values);
-                 
+         return $this->id = $dbh->lastInsertId();        
         }
     }
 /*

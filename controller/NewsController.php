@@ -24,6 +24,9 @@ class NewsController extends AbstractController{
     protected function addArticleAction(){
         $title = $_POST['title'];
         $content = $_POST['content'];
+        $obj = new ArticlesModel;
+        $obj->title = $title;
+        $obj->content = $content;
         $id_art = ArticlesModel::addArticle($title, $content);
         $allNews =  ArticlesModel::getAll();
         $view = new View;
