@@ -5,6 +5,7 @@
     static private $dbh = null;
     protected $isNew = false;
     static protected $table;
+    static $column ;
 
     static function getDbh(){
         if(self::$dbh == null) {
@@ -31,7 +32,25 @@
         $sth->execute($arr);
         return $sth->fetch();
     }
-
+    
+    function save(){
+        if($this->id){
+            $tokens = [];
+            $values =[];
+            foreach(static::$column as $column){
+                $tokens[] = ':'.$column;
+                $values[':'.$column] = $this->$column;
+         }
+         $sql = 'insert into '.static::$table.
+         '('.implode(',', static::$columns).')'
+          . ' values('.implode(',',$tokens).')';
+         $dbh = self::getDbh();
+         $sth = $dbh->prepare($sql);
+         $sth->execute($values);
+                 
+        }
+    }
+/*
     static function delete($id){
         $sq = 'delete from '.static::$table.' where id_art = :id';
         $arr = array(':id'=>$id);
@@ -44,9 +63,7 @@
    
         $sq = 'update articles set  title = "'.$title.
                  '", content = "'.$content.'" where id_art ='.$id;
-       // $arr = array(':title'=>$title,':content'=>$content);
         $dbh = self::getDbh();
-       // $sth = $dbh->prepare($sq);
         $dbh->query($sq);        
     }
     
@@ -56,11 +73,11 @@
         '","'.$content.'")';
         $dbh = self::getDbh();
         $sth = $dbh->query($sq);
-       // var_dump($sth);die;
     }
+ * 
+ */
 }
 
-//AbstractDBArticles::update($id, $title, $content)
 
 
 
