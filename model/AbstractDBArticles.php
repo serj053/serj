@@ -34,20 +34,22 @@
     }
     
     function save(){
-        if($this->id){
+        
             $tokens = [];
             $values =[];
-            foreach(static::$column as $column){
+            foreach(static::$columns as $column){
                 $tokens[] = ':'.$column;
                 $values[':'.$column] = $this->$column;
          }
+         if(!isset($this->id)){
          $sql = 'insert into '.static::$table.
-         '('.implode(',', static::$columns).')'
-          . ' values('.implode(',',$tokens).')';
-         $dbh = self::getDbh();
+         ' ('.implode(',', static::$columns).') 
+           values('.implode(',',$tokens).')';
+         $dbh = static::getDbh();
          $sth = $dbh->prepare($sql);
          $sth->execute($values);
-         return $this->id = $dbh->lastInsertId();        
+         $this->id = $dbh->lastInsertId();  
+         //return $this->id = $dbh->lastInsertId();        
         }
     }
 /*

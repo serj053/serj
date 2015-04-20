@@ -25,9 +25,10 @@ class NewsController extends AbstractController{
         $title = $_POST['title'];
         $content = $_POST['content'];
         $obj = new ArticlesModel;
+        $obj->id_user = 12;
         $obj->title = $title;
         $obj->content = $content;
-        $id_art = ArticlesModel::addArticle($title, $content);
+        $id_art = $obj->save();
         $allNews =  ArticlesModel::getAll();
         $view = new View;
         $view->item = $allNews;
