@@ -1,0 +1,62 @@
+/*Стили страницы списка новостей*/
+    #cap{
+        height:40px;
+    }
+    #menu, #edit{
+        text-align:center;
+    }
+    #all_news{
+        border:1px solid #ccc;
+        width:550px;
+        margin:50px auto;
+        background-color:#eee;
+    }
+    #string{
+        border-bottom: 1px solid #888;
+    }
+    #title{
+        padding-left:10px;
+        width:100px;
+        height:20px;
+        background-color:#cc9;
+        float:left;
+        overflow:hidden;
+    }
+    #content{
+        width:350px;
+        height:20px;
+        overflow:hidden;
+        float:left;
+    }
+    #read_farther{
+        width:100px;
+        height:20px;
+        margin-left:450px;
+    }
+/*стили страницы где расположена одна статья*/
+    #title_art{
+        text-align:center;
+        margin:10px auto;
+    }
+/*стили страницы создания новой статьи*/
+    #new_article{
+        border:1px solid #ccc;
+        width:500px;
+        margin:50px auto;
+        background-color:#eee;
+    }
+    #new_title{
+        display:block;
+        margin:10px auto;
+    }
+    #new_content{
+        display:block;
+        margin:10px auto;
+        width:480px;
+        height:200px;
+        overflow:visible;
+    }
+    #submit_new{
+        margin-left:40px;
+    }
+
