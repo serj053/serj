@@ -34,7 +34,7 @@
     }
     
     function save(){
-        
+         $dbh = static::getDbh();
             $tokens = array();
             $values =array();
             foreach(static::$columns as $column){
@@ -44,23 +44,31 @@
          if(!isset($this->id)){
          $sql = 'insert into '.static::$table.
          ' ('.implode(',', static::$columns).') 
-           values('.implode(',',$tokens).')';
-         $dbh = static::getDbh();
+           values('.implode(',',$tokens).')';       
          $sth = $dbh->prepare($sql);
          $sth->execute($values);
-         $this->id = $dbh->lastInsertId();  
-         //return $this->id = $dbh->lastInsertId();        
+         $this->id = $dbh->lastInsertId();        
+        }else{
+            $tokens = array();
+            foreach(static::$columns as $column ){
+                $tokens[] = $column.'= :'.$column;
+            }
+            $sql = 'update '.static::$table.' set '
+                    .implode(',', $tokens).''
+                    . 'where id_art = :id' ;
+            $sth = $dbh->prepare($sql);
+            $sth->execute(array(':id'=>$this->id) + $values);
         }
     }
-/*
-    static function delete($id){
+
+    function delete($id){
         $sq = 'delete from '.static::$table.' where id_art = :id';
         $arr = array(':id'=>$id);
         $dbh = self::getDbh();
         $sth = $dbh->prepare($sq);
         return $sth->execute($arr);
     }
-    
+/*    
     static function update($id,$title,$content ){    
    
         $sq = 'update articles set  title = "'.$title.

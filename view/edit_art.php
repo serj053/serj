@@ -20,7 +20,7 @@
         <a href="">Удалить</a>
     </div>
     <div id="new_article">
-        <form action="index.php?ctrl=News/updateArticle&id_art=
+        <form action="index.php?ctrl=News/addArticle&id_art=
         <?php echo $_GET['id_art'] ;  ?>" method="post" >
             <input type="text" name="title"
                    value="<?php echo $this->data['news']['title'] ?>"/>

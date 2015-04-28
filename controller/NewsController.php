@@ -45,7 +45,8 @@ class NewsController extends AbstractController{
 
     protected function deleteArticleAction(){
         $id = $_GET['id_art'];
-        ArticlesModel::delete($id);
+        $obj = new ArticlesModel;
+        $obj->delete($id);
         $allNews =  ArticlesModel::getAll();
         $view = new View;
         $view->item = $allNews;
